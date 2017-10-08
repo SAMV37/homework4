@@ -28,15 +28,16 @@ function triangleStars(height){
                 return main(height-1);
             }
 
-            return main(height);
+            main(height);
 }
 
 //This is a function which will return base to the power of n
 function pow(base, n) {
-    if (n === 0)
+    if (n === 0) {
         return 1;
-    else
+    } else {
         return base * pow(base, n - 1);
+    }
 }
 
 //This is a function which will reverse the given string
@@ -86,4 +87,8 @@ function checkBoard(size) {
     }
     height(0);
 }
+
+
+
+
 
