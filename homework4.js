@@ -1,24 +1,24 @@
 //This is a function which will create for you a triangle of given height
-function triangleStars(height){
-            function starGenerator(starCounter){
+const triangleStars = function(height){
+            const starGenerator = function(starCounter){
 
                 if(starCounter === 0){
                     return '';
                 }
 
                 return '*' + starGenerator(starCounter -1);
-            }
+            };
 
-            function spaceGenerator(spaceCounter){
+            const spaceGenerator = function(spaceCounter){
 
                 if(spaceCounter >= height){
                     return '';
                 }
 
                 return ' ' + spaceGenerator(spaceCounter+1);
-            }
+            };
 
-            function main(height){
+            const main = function(height){
 
                 if(height <=0){
                     return '';
@@ -26,35 +26,35 @@ function triangleStars(height){
 
                 console.log(spaceGenerator(height) + starGenerator((height*2)-1));
                 return main(height-1);
-            }
+            };
 
             main(height);
-}
+};
 
 //This is a function which will return base to the power of n
-function pow(base, n) {
+const pow = function(base, n) {
     if (n === 0) {
         return 1;
     } else {
         return base * pow(base, n - 1);
     }
-}
+};
 
 //This is a function which will reverse the given string
-function reverse(str){
-    function returner(num){
+const reverse = function(str){
+    const returner = function(num){
         if(num === 0){
             return '';
         }
         return str[num - 1] + returner(num - 1);
-    }
+    };
 
     return returner(str.length);
-}
+};
 
 //This is a function which will draw a checkmate Board with the given height
-function checkBoard(size) {
-    function width1(n) {
+const checkBoard = function(size) {
+    const width1 = function(n) {
         if (n === size) {
             return '';
         }
@@ -63,8 +63,8 @@ function checkBoard(size) {
         } else {
             return ' ' + width1(n + 1);
         }
-    }
-    function width2(n){
+    };
+    const width2 = function(n){
         if (n === size) {
             return '';
         }
@@ -73,8 +73,8 @@ function checkBoard(size) {
         } else {
             return '*' + width2(n + 1);
         }
-    }
-    function height(n){
+    };
+    const height = function(n){
         if (n === size) {
             return '';
         }
@@ -84,9 +84,9 @@ function checkBoard(size) {
             console.log(width2(0));
         }
         height(n + 1);
-    }
+    };
     height(0);
-}
+};
 
 
 
